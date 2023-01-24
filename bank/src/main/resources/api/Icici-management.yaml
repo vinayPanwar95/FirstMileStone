@@ -1,0 +1,34 @@
+openapi: 3.0.2
+info:
+  title: "ICICI management APIs"
+  version: 1.0.1
+  description:
+    ICICI management APIs
+  contact:
+    name: Vinay Panwar
+    email: vinay.panwar95@gmail.com
+  license:
+    name: UBS A6 License
+    url: http://www.ubs.com
+
+paths:
+  /collateral-contract/lending-value-client-tiers/tiering-types:
+  post:
+    tags:
+      - LVX
+    description: "List all the client tiering types"
+    operationId: "findClientTieringTypes"
+    parameters:
+      - Sref: "#/components/ parameters/MandatorInQueryParam"
+    responses:
+      200:
+        description: "Retrieval successful"
+        content:
+          application/json:
+            schema:
+            $ref: "#/components/schemas/ClientTieringTypesResource"
+  400:
+    $ref: '#/components/responses/LVXApiErrorResponse'
+  403:
+    $ref: '#/components/responses/LVXApiErrorResponse
+
