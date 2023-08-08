@@ -1,0 +1,16 @@
+com:
+  learning:
+    security:
+      localSecurityEnabled: true
+      local-users:
+        - username: vinay
+          tNumber: T706086
+          roles:
+            - ROLE_VIEWER
+            - ROLE_MAKER
+        - username: shivani
+          tNumber: T706087
+          roles:
+            - ROLE_VIEWER
+
+
